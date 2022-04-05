@@ -3,13 +3,14 @@ import './App.css';
 import {useState} from'react'
 function App() {
   const [todos,setTodos]=useState([])
+  const [todo,setTodo]=useState('')
   return (
     <div className="app">
     <div className="mainHeading">
       <h1>ToDo List</h1>
     </div>
     <div className="subHeading">
-      <br />
+      <br  />
       <h2>Whoop, it's Wednesday 🌝 ☕ </h2>
     </div>
     <div className="input">
