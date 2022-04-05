@@ -14,11 +14,15 @@ function App() {
       <h2>Whoop, it's Wednesday 🌝 ☕ </h2>
     </div>
     <div className="input">
-      <input type="text" placeholder="🖊️ Add item..." />
-      <i className="fas fa-plus"></i>
+      <input value={todo} onChange={(e)=>setTodo(e.target.value)} type="text" placeholder="🖊️ Add item..." />
+      <i onClick={()=>setTodos([...todos,todo])}  className="fas fa-plus"></i>
     </div>
     <div className="todos">
-      <div className="todo">
+
+
+     {todos.map(()=>{
+     
+     return (<div className="todo">
         <div className="left">
           <input type="checkbox" name="" id="" />
           <p>Rect tutorial</p>
@@ -26,8 +30,13 @@ function App() {
         <div className="right">
           <i className="fas fa-times"></i>
         </div>
-      </div>
+      </div>)
+      
+    })}
+
+
     </div>
+  
   </div>
   );
 }
