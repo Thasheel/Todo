@@ -2,6 +2,7 @@
 import './App.css';
 import {useState} from'react'
 function App() {
+  const [todos,setTodos]=useState([])
   return (
     <div className="app">
     <div className="mainHeading">
